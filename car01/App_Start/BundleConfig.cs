@@ -25,6 +25,10 @@ namespace car01
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/bundles/datatables").Include(
+                     "~/Scripts/DataTavles/jquery.dataTables.js",
+                     "~/Scripts/DataTables/dataTables.bootstrap.js"));
         }
     }
 }
