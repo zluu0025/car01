@@ -1,0 +1,51 @@
+﻿@model car01.Models.OrdersSet
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrdersSet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Renting_Start_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Renting_Start_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Renting_End_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Renting_End_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total_Renting_Fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total_Renting_Fee)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Order_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,35 @@
+﻿@model car01.Models.Return_RecordsSet
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Return_RecordsSet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationSet.Location_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationSet.Location_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrdersSet.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrdersSet.UserId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

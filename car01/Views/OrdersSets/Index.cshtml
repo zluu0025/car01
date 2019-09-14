@@ -1,0 +1,52 @@
+﻿@model IEnumerable<car01.Models.OrdersSet>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Renting_Start_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Renting_End_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total_Renting_Fee)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Renting_Start_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Renting_End_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total_Renting_Fee)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Order_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Order_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Order_Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,67 @@
+﻿@model car01.Models.CarsSet
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CarsSet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationSet.Location_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationSet.Location_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Car_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Car_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Car_MarK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Car_MarK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Car_Vin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Car_Vin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Car_Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Car_Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Car_License_Plate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Car_License_Plate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Car_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
